@@ -42,6 +42,7 @@
         <link rel="icon" href="/static/icons/favicon.ico" />
         <script src="/static/htmx.min.js"></script>
         <script src="/static/hyperscript.min.js"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/zvd5hlr.css" />
         <link rel="stylesheet" href="static/wxyz.css" />
         <title>Carytown Massage</title>
     </head>
@@ -87,9 +88,14 @@
                     <li><a href="/about">About</a></li>
                     <li><a href="/services">Services</a></li>
                     <li><a href="/gift-cards">Gift Cards</a></li>
-                    <li><a href="tel:804-424-2607">(804) 424-2607</a></li>
+                    <li>
+                        <a href="tel:804-424-2607" id="phone-anchor"
+                            >(804) 424-2607</a
+                        >
+                    </li>
                     <li>
                         <a
+                            id="booking-anchor"
                             href="https://square.site/book/LH466QXPEW2KV/massage-on-main-llc-richmond-va"
                             >Booking</a
                         >
@@ -106,17 +112,69 @@
                 </a>
             </div>
         </header>
-        <main style="padding-top: 20px; background-color: grey">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id
-                interdum sapien. Nam sollicitudin semper lectus, a bibendum nisl
-                eleifend at. Maecenas venenatis velit at augue imperdiet,
-                vehicula congue mi egestas. Vestibulum eget mi sed eros vehicula
-                venenatis. Mauris consectetur justo a odio egestas finibus.
-                Morbi vel pulvinar mauris, ut vestibulum nunc. Pellentesque
-                libero diam, dapibus vitae vulputate eu, tempus porta mauris.
-                Quisque non felis orci.
-            </p>
+        <main>
+            <div>
+                <h1
+                    style="
+                        display: inline;
+                        background: linear-gradient(
+                            to bottom,
+                            transparent 60%,
+                            #fbcfcd 40%
+                        );
+                    "
+                >
+                    Carytown Massage is located in the heart of Richmond, VA.
+                </h1>
+                <h2>Request an appointment online or over the phone.</h2>
+                <p>
+                    Please book online or by calling 804-424-2607! Online
+                    booking availability is up-to-date and accurate!
+                </p>
+                <p>
+                    We offer couples massage. Online booking is not available
+                    for this service, please call or text to book a couples
+                    massage
+                </p>
+                <p>
+                    We wish to provide you with the most high-quality experience
+                    we can, in a safe, clean environment.
+                </p>
+                <p>
+                    Our licensed professionals will help you relax and integrate
+                    massage into a part of your preventative health routine.
+                </p>
+                <p>
+                    Gift cards are available through the booking tab on the top
+                    right of the website. We do not offer physical gift cards at
+                    this time. Gift cards purchased prior to 2021 are not
+                    accepted at this location.
+                </p>
+                <p>- Anthony LMT and Owner</p>
+                <div id="grid">
+                    <a href="/services/swedish-massage" id="one">
+                        <img
+                            src="/static/photos/swedish-massage.jpg"
+                            alt="Picture of swedish massage"
+                        />
+                        <h3>Swedish Massage</h3>
+                    </a>
+                    <a href="/services/therapeutic-massage" id="two">
+                        <img
+                            src="/static/photos/therapeutic-massage.jpg"
+                            alt="Picture of therapeutic massage"
+                        />
+                        <h3>Therapeutic Massage</h3>
+                    </a>
+                    <a href="/services/sports-massage" id="three">
+                        <img
+                            src="/static/photos/sports-massage.jpg"
+                            alt="Picture of sports massage"
+                        />
+                        <h3>Sports Massage</h3>
+                    </a>
+                </div>
+            </div>
         </main>
         <footer>
             <div class="footer-margin">
