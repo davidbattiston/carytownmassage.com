@@ -1,0 +1,128 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "HealthAndBeautyBusiness",
+                "@id": "https://carytownmassage.com",
+                "name": "Carytown Massage",
+                "description": "Massage therapy in Richmond, VA.",
+                "url": "https://carytownmassage.com",
+                "telephone": "+18044242607",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "3316 West Cary Street",
+                    "addressLocality": "Richmond",
+                    "addressRegion": "VA",
+                    "postalCode": "23221",
+                    "addressCountry": "US"
+                },
+                "geo": {
+                    "latitude": "37.55462875256322",
+                    "longitude": "-77.48456310462822",
+                    "@type": "GeoCoordinates"
+                },
+                "areaServed": [
+                    {
+                        "@type": "GeoCircle",
+                        "geoMidpoint": {
+                            "@type": "GeoCoordinates",
+                            "latitude": "37.55462875256322",
+                            "longitude": "-77.48456310462822"
+                        },
+                        "geoRadius": "40000"
+                    }
+                ]
+            }
+        </script>
+        <link rel="icon" href="/static/icons/favicon.ico" />
+        <script src="/static/htmx.min.js"></script>
+        <script src="/static/hyperscript.min.js"></script>
+        <link rel="stylesheet" href="static/wxyz.css" />
+        <title>Carytown Massage</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="">
+                <a href="/" id="logo-anchor">
+                    <img
+                        src="/static/icons/Carytown-Massage-Logo.svg"
+                        alt="Carytown Massage Logo"
+                    />
+                </a>
+                <div>
+                    <button
+                        aria-label="Open navigation menu"
+                        hx-get="/menu"
+                        hx-target="#menu"
+                        hx-trigger="click"
+                        hx-swap="outerHTML"
+                        id="open"
+                        _="on click hide me then show #close"
+                    >
+                        <img
+                            alt="Open navigation menu button"
+                            src="/static/icons/open.svg"
+                        />
+                    </button>
+                    <button
+                        aria-label="Close navigation menu"
+                        id="close"
+                        _="on click hide me then show #open then remove #menu-ul"
+                        style="display: none"
+                    >
+                        <img
+                            alt="Close navigation menu button"
+                            src="/static/icons/close.svg"
+                        />
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/gift-cards">Gift Cards</a></li>
+                    <li><a href="tel:804-424-2607">(804) 424-2607</a></li>
+                    <li>
+                        <a
+                            href="https://square.site/book/LH466QXPEW2KV/massage-on-main-llc-richmond-va"
+                            >Booking</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <div id="menu"></div>
+                <a
+                    href="https://square.site/book/LH466QXPEW2KV/massage-on-main-llc-richmond-va"
+                    class="mobile-booking"
+                >
+                    Booking
+                </a>
+            </div>
+        </header>
+        <main style="padding-top: 20px; background-color: grey">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id
+                interdum sapien. Nam sollicitudin semper lectus, a bibendum nisl
+                eleifend at. Maecenas venenatis velit at augue imperdiet,
+                vehicula congue mi egestas. Vestibulum eget mi sed eros vehicula
+                venenatis. Mauris consectetur justo a odio egestas finibus.
+                Morbi vel pulvinar mauris, ut vestibulum nunc. Pellentesque
+                libero diam, dapibus vitae vulputate eu, tempus porta mauris.
+                Quisque non felis orci.
+            </p>
+        </main>
+        <footer>
+            <div class="footer-margin">
+                <div class="footer-col-1"></div>
+                <div class="footer-col-2"></div>
+            </div>
+        </footer>
+    </body>
+</html>
