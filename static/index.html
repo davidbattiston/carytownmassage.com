@@ -58,9 +58,6 @@
 
             gtag("config", "G-9G83G1JX69");
         </script>
-        <link rel="stylesheet" href="/leaflet.css" />
-        <!-- Make sure you put this AFTER Leaflet's CSS -->
-        <script src="/leaflet.js"></script>
         <title>Carytown Massage</title>
     </head>
 
@@ -231,9 +228,7 @@
                         >
                     </p>
                 </div>
-                <div id="footer-col-2">
-                    <div id="map"></div>
-                </div>
+                <div id="footer-col-2"></div>
             </div>
             <div class="copyright">
                 <a href="/">Privacy Policy</a> | &copy;
@@ -244,16 +239,5 @@
                 Carytown Massage
             </div>
         </footer>
-        <script>
-            var map = L.map("map").setView(
-                [37.55462875256322, -77.48456310462822],
-                19,
-            );
-            L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                maxZoom: 19,
-                attribution:
-                    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-            }).addTo(map);
-        </script>
     </body>
 </html>
