@@ -9,6 +9,14 @@ app.use("/*", serveStatic({ root: "./static" }));
 app.use("/*", serveStatic({ root: "./txt" }));
 
 app.get(
+  "*",
+  cache({
+    cacheControl: "max-age=31536000",
+    wait: true,
+  }),
+);
+
+app.get(
   "/",
   serveStatic({ root: "./" }),
   cache({
