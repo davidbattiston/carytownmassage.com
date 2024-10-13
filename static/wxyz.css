@@ -172,8 +172,8 @@ header {
         flex-direction: column;
 
         > #menu {
-            padding: 20px;
             ul {
+                padding: 20px;
                 display: flex;
                 flex-direction: column;
             }

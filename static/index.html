@@ -115,7 +115,7 @@
         <main>
             <img
                 alt="Candle lit in relaxing place"
-                src="/static/photos/candles-and-stones.jpg"
+                src="/static/photos/massage-therapy-richmond.webp"
             />
             <div>
                 <h1
@@ -158,21 +158,24 @@
                 <div id="grid">
                     <a href="/services/swedish-massage" id="one">
                         <img
-                            src="/static/photos/swedish-massage.jpg"
+                            loading="lazy"
+                            src="/static/photos/swedish-massage.webp"
                             alt="Picture of swedish massage"
                         />
                         <h3>Swedish Massage</h3>
                     </a>
                     <a href="/services/therapeutic-massage" id="two">
                         <img
-                            src="/static/photos/therapeutic-massage.jpg"
+                            loading="lazy"
+                            src="/static/photos/therapeutic-massage.webp"
                             alt="Picture of therapeutic massage"
                         />
                         <h3>Therapeutic Massage</h3>
                     </a>
                     <a href="/services/sports-massage" id="three">
                         <img
-                            src="/static/photos/sports-massage.jpg"
+                            loading="lazy"
+                            src="/static/photos/sports-massage.webp"
                             alt="Picture of sports massage"
                         />
                         <h3>Sports Massage</h3>
@@ -182,8 +185,38 @@
         </main>
         <footer>
             <div class="footer-margin">
-                <div class="footer-col-1"></div>
-                <div class="footer-col-2"></div>
+                <div class="footer-col-1">
+                    <h3>Locate Us</h3>
+                    <p>
+                        Carytown Massage is located at 3316 W Cary St, Richmond
+                        VA 23221 inside the StylePod building, we are in unit
+                        104. There is free parking available in the back and
+                        paid parking available in the parking garage behind our
+                        building. Our building marked in pink on the map.
+                    </p>
+                    <p>
+                        Any missed calls will usually be returned within the
+                        hour. Feel free to text us at (804) 424-2607 with any
+                        questions you may have.
+                    </p>
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday: 9AM - 10PM</p>
+                    <p>Saturday - Sunday: 10AM - 7PM</p>
+                    <h4>Connect With Us</h4>
+                    <p>
+                        <a href="mailto:anthony@massageonmainrva.com"
+                            >Anthony@massageonmainrva.com</a
+                        >
+                    </p>
+                    <p>
+                        <a href="https://www.facebook.com/CarytownMassage/"
+                            >Facebook ↗</a
+                        >
+                    </p>
+                </div>
+                <div class="footer-col-2">
+                    <div class="map-container" bind:this="{container}" />
+                </div>
             </div>
         </footer>
     </body>
