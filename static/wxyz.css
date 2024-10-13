@@ -379,6 +379,8 @@ footer {
         height: 100%;
         width: 100%;
         min-height: 400px;
+
+        z-index: 0;
     }
 
     .copyright {

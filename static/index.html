@@ -58,19 +58,18 @@
 
             gtag("config", "G-9G83G1JX69");
         </script>
-        <script>
-            let map;
-            let zoom = 19;
-            let center = { lat: 37.55462875256322, lng: -77.48456310462822 };
-            function initMap() {
-                map = new google.maps.Map(document.getElementById("map"), {
-                    zoom,
-                    center,
-                    disableDefaultUI: true,
-                });
-            }
-            window.initMap = initMap;
-        </script>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        />
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
+        ></script>
         <title>Carytown Massage</title>
     </head>
 
@@ -254,10 +253,16 @@
                 Carytown Massage
             </div>
         </footer>
-        <script
-            async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2oGsK5cxT2msAL5n7VAEy9duf7cs9G2E&loading=async&callback=initMap"
-            defer
-        ></script>
+        <script>
+            var map = L.map("map").setView(
+                [37.55462875256322, -77.48456310462822],
+                19,
+            );
+            L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                maxZoom: 19,
+                attribution:
+                    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+            }).addTo(map);
+        </script>
     </body>
 </html>
