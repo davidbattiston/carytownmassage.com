@@ -39,11 +39,38 @@
                 ]
             }
         </script>
-        <link rel="icon" href="/static/icons/favicon.ico" />
-        <script src="/static/htmx.min.js"></script>
-        <script src="/static/hyperscript.min.js"></script>
+        <link rel="icon" href="/favicon.ico" />
+        <script src="/htmx.min.js"></script>
+        <script src="/hyperscript.min.js"></script>
         <link rel="stylesheet" href="https://use.typekit.net/zvd5hlr.css" />
-        <link rel="stylesheet" href="static/wxyz.css" />
+        <link rel="stylesheet" href="/wxyz.css" />
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-9G83G1JX69"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-9G83G1JX69");
+        </script>
+        <script>
+            let map;
+            let zoom = 19;
+            let center = { lat: 37.55462875256322, lng: -77.48456310462822 };
+            function initMap() {
+                map = new google.maps.Map(document.getElementById("map"), {
+                    zoom,
+                    center,
+                    disableDefaultUI: true,
+                });
+            }
+            window.initMap = initMap;
+        </script>
         <title>Carytown Massage</title>
     </head>
 
@@ -52,7 +79,7 @@
             <nav class="">
                 <a href="/" id="logo-anchor">
                     <img
-                        src="/static/icons/Carytown-Massage-Logo.svg"
+                        src="/icons/Carytown-Massage-Logo.svg"
                         alt="Carytown Massage Logo"
                     />
                 </a>
@@ -68,7 +95,7 @@
                     >
                         <img
                             alt="Open navigation menu button"
-                            src="/static/icons/open.svg"
+                            src="/icons/open.svg"
                         />
                     </button>
                     <button
@@ -79,7 +106,7 @@
                     >
                         <img
                             alt="Close navigation menu button"
-                            src="/static/icons/close.svg"
+                            src="/icons/close.svg"
                         />
                     </button>
                 </div>
@@ -115,7 +142,7 @@
         <main>
             <img
                 alt="Candle lit in relaxing place"
-                src="/static/photos/massage-therapy-richmond.webp"
+                src="/photos/massage-therapy-richmond-banner.webp"
             />
             <div>
                 <h1
@@ -159,7 +186,7 @@
                     <a href="/services/swedish-massage" id="one">
                         <img
                             loading="lazy"
-                            src="/static/photos/swedish-massage.webp"
+                            src="/photos/swedish-massage-card.webp"
                             alt="Picture of swedish massage"
                         />
                         <h3>Swedish Massage</h3>
@@ -167,7 +194,7 @@
                     <a href="/services/therapeutic-massage" id="two">
                         <img
                             loading="lazy"
-                            src="/static/photos/therapeutic-massage.webp"
+                            src="/photos/therapeutic-massage-card.webp"
                             alt="Picture of therapeutic massage"
                         />
                         <h3>Therapeutic Massage</h3>
@@ -175,7 +202,7 @@
                     <a href="/services/sports-massage" id="three">
                         <img
                             loading="lazy"
-                            src="/static/photos/sports-massage.webp"
+                            src="/photos/sports-massage-card.webp"
                             alt="Picture of sports massage"
                         />
                         <h3>Sports Massage</h3>
@@ -184,8 +211,8 @@
             </div>
         </main>
         <footer>
-            <div class="footer-margin">
-                <div class="footer-col-1">
+            <div id="footer-margin">
+                <div id="footer-col-1">
                     <h3>Locate Us</h3>
                     <p>
                         Carytown Massage is located at 3316 W Cary St, Richmond
@@ -214,10 +241,23 @@
                         >
                     </p>
                 </div>
-                <div class="footer-col-2">
-                    <div class="map-container" bind:this="{container}" />
+                <div id="footer-col-2">
+                    <div id="map"></div>
                 </div>
             </div>
+            <div class="copyright">
+                <a href="/">Privacy Policy</a> | &copy;
+                <p
+                    style="display: inline"
+                    _="on load js return new Date().getFullYear() end then put it into my.innerHTML"
+                ></p>
+                Carytown Massage
+            </div>
         </footer>
+        <script
+            async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2oGsK5cxT2msAL5n7VAEy9duf7cs9G2E&loading=async&callback=initMap"
+            defer
+        ></script>
     </body>
 </html>

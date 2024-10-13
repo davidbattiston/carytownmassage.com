@@ -354,3 +354,40 @@ main {
         }
     }
 }
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    #footer-margin {
+        @media only screen and (min-width: 1200px) {
+            margin-left: auto;
+            margin-right: auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        max-width: 1200px;
+        margin: 0px auto;
+        padding: 48px 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 70px;
+    }
+
+    #map {
+        height: 100%;
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .copyright {
+        max-width: 1200px;
+        margin: 0px auto;
+        padding-bottom: 28px;
+        font-size: 12px;
+        a {
+            font-size: 12px;
+        }
+    }
+}
